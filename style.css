@@ -366,31 +366,113 @@ This is main CSS file that contains custom style rules used in this template
 
 /*----- Header Menu
 --------------------------------------------------------------*/
-#header .header-wrap {
+/* General styles */
+#header {
     position: fixed;
-    background-color: rgba(25, 24, 24, 0.5);
-    padding: 20px 40px; 
+    top: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    flex-direction: column; 
-    align-items: stretch; 
-    overflow-x: hidden; 
-    overflow-y: auto; 
-    max-height: 100vh; 
+    background-color: rgba(25, 24, 24, 0.5);
+    padding: 20px 0;
     z-index: 2;
   }
   
-  @media (min-width: 768px) {
-    #header .header-wrap {
-      flex-direction: row; 
-      align-items: center;
-      justify-content: space-between; 
-      padding: 20px 40px; 
-      overflow-x: auto; 
-      -webkit-overflow-scrolling: touch; 
-      white-space: nowrap; 
+  .header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .main-logo {
+    flex: 0 0 auto;
+  }
+  
+  .main-logo img {
+    max-height: 70px;
+  }
+  
+  #navbar {
+    flex: 1;
+  }
+  
+  .top-menu {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .menu-item {
+    margin-left: 20px;
+  }
+  
+  .menu-item:first-child {
+    margin-left: 0;
+  }
+  
+  .header-wrap .top-menu ul {
+    display: flex;
+    margin: 0;
+  }
+  
+  .header-wrap .top-menu li {
+    margin-right: 30px;
+  }
+  
+  .header-wrap .top-menu a {
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 5px;
+  }
+  
+  .header-wrap .top-menu a:hover {
+    border-bottom: 1px solid #fba820;
+  }
+  
+  /* Responsive styles */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .menu-toggle:hover {
+    background-color: #fba820;
+    color: #191818;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-list {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menu-list.active {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
     }
   }
+  
+  
   
   
   

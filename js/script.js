@@ -12,6 +12,7 @@
   // ------------------------------------------------------------------------------ //
  
  $(document).ready(function(){
+  
       
 	$('.service-slider').slick({
       slidesToShow: 3,
@@ -61,6 +62,16 @@ $(document).on('click touchstart', function (e){
   }
 
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuList = document.querySelector('.menu-list');
+
+  menuToggle.addEventListener('click', function() {
+    menuList.classList.toggle('active');
+  });
+});
+
 
 const tabs = document.querySelectorAll('[data-tab-target]')
 const tabContents = document.querySelectorAll('[data-tab-content]')
