@@ -367,10 +367,9 @@ This is main CSS file that contains custom style rules used in this template
 /*----- Header Menu
 --------------------------------------------------------------*/
 #header .header-wrap {
-    position: fixed;
-    background-color: rgba(16, 16, 16, 0.5); 
-    background-size: cover; 
-    padding: 20px; 
+    position:absolute;
+    background-color: rgba(25, 24, 24, 0.5);  
+    padding: 40px; 
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -404,15 +403,15 @@ This is main CSS file that contains custom style rules used in this template
 }
 @media screen and (max-width: 1080px) {  
   #navbar .menu-icon {
-      display: block;
+      display: flex;
   }
   .top-menu .menu-icon .icon-segment,
   .top-menu.menu-bar .menu-icon .icon-close {
-      display: block;
+      display: flex;
   }
   .top-menu.menu-bar .menu-icon .icon-segment,
   .top-menu .menu-icon .icon-close {
-      display: none;
+      display: flex;
   }
 }
 
@@ -433,7 +432,7 @@ This is main CSS file that contains custom style rules used in this template
 
 @media screen and (max-width: 1080px){
     .header-wrap .top-menu.menu-bar ul {
-        display: block;
+        display: flex;
         position: fixed;
         top: 0;
         left: 0;
@@ -449,10 +448,10 @@ This is main CSS file that contains custom style rules used in this template
         margin: 0;
     }
     .header-wrap .top-menu.menu-bar ul {
-        display: block;
+        display: none;
     }
     .header-wrap .top-menu.menu-bar ul {
-        display: unset;
+        display: none;
     }
     .header-wrap .top-menu.menu-bar .menu-list a {
         font-size: 3.5em;
