@@ -1,16 +1,8 @@
-/*!
- * Generated using the Bootstrap Customizer (<none>)
- * Config saved to config.json and <none>
- */
 
 (function($) {
 
   "use strict";
 
-  // ------------------------------------------------------------------------------ //
-  // get path relative to javascript
-  // ------------------------------------------------------------------------------ //
- 
  $(document).ready(function(){
   
     $('.service-slider').slick({
